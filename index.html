@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Grace Modifier Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+    <header class="site-header">
+        <h1>Grace Modifier Calculator</h1>
+        <p>Select modifiers and stacks to calculate total percentage</p>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <div class="control-row">
+                <label for="search">Search</label> 
+                <input id="search" type="text" placeholder="Filter by name, category, or note..." />
+            </div>
+
+            <div class="control-row">
+                <label for="category">Category</label>
+                <select id="category">
+                    <option value="">All</option>
+                    <option value="carnation">carnation</option>
+                    <option value="heed/slight">heed/slight</option>
+                    <option value="slugfish">slugfish</option>
+                    <option value="elkman">elkman</option>
+                    <option value="dozer">dozer</option>
+                    <option value="sorrow">sorrow</option>
+                    <option value="goatman">goatman</option>
+                    <option value="litany">litany</option>
+                    <option value="doppel">doppel</option>
+                    <option value="kookoo">kookoo</option>
+                    <option value="doombringer">doombringer</option>
+                    <option value="rue">rue</option>
+                    <option value="ire">ire</option>
+                    <option value="drain">drain</option>
+                    <option value="mime">mime</option>
+                    <option value="hazards">hazards</option>
+                    <option value="player">player</option>
+                    <option value="rooms">rooms</option>
+                    <option value="misc">misc</option>
+                    <option value="event">event</option>
+                    <option value="joke">joke</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="list-and-total">
+            <div id="modifiers-list" class="modifiers-list" aria-live="polite"></div>
+
+            <aside class="summary">
+                <h2>Total</h2>
+                <div class="total-line">
+                    <span class="total-label">Sum of modifiers:</span>
+                    <span id="total" class="total-value">+0%</span>
+                </div>
+                <div class="footnote">
+                    This calculator adds percentages directly. Stackable items multiply their own value by the chosen stack count. Notes/dependencies are shown but not auto-enforced.
+                </div>
+            </aside>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div>Gathered from wiki + in-game, accurate as of 14/09/2025</div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
